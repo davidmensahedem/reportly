@@ -135,7 +135,7 @@
         [{
           success: true,
           message: "Successful",
-          incidents: [
+          incident: [
                     {
             "client_id": "1",
             "incident_desc": "Dems Break Dance Competition",

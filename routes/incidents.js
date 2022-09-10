@@ -149,7 +149,7 @@ router.post("/incident", async (req, res) => {
       } else {
         return res.status(200).json({
           success: true,
-          message: "Successful",
+          message: "Incident created successful",
           incident: response.rows
         });
       }
