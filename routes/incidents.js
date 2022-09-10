@@ -1,7 +1,7 @@
+const { default: axios } = require("axios");
 const express = require("express");
 const db = require("../model/connection");
 const router = express.Router();
-const { default: axios } = require("axios");
 
 
 
@@ -117,21 +117,25 @@ router.post("/incident", async (req, res) => {
 
   const { incident_desc, city, country } = req.body;
 
-
-
   try {
 
-    // get the weather information
-    const { data } = await axios.get(process.env.OPENWEATHERMAP_URL, {
+    try {
+      // get the weather information
+      const { data } = await axios.get(process.env.OPENWEATHERMAP_URL, {
+        params: {
+          "q": city,
+          "APPID": process.env.OPENWEATHERMAP_KEY
+        }
+      });
 
-      params: {
-        "q": city,
-        "APPID": process.env.OPENWEATHERMAP_KEY
-      }
+      var { weather: weatherReport } = data;
 
-    });
-
-    const { weather: weatherReport } = data;
+    } catch (error) {
+      return res.status(400).json({
+        success: false,
+        message: "City not found"
+      });
+    }
 
     // insert the :weatherReport report and the request body's 
     // data into the incidents database
@@ -156,9 +160,9 @@ router.post("/incident", async (req, res) => {
 
 
   } catch (error) {
-    return res.status(500).json({
+    return res.status(400).json({
       success: false,
-      message: "Couldn't create an incident report",
+      message: error
     });
   }
 });
