@@ -54,14 +54,17 @@
 
    <ul>
     <li>
+        <p><b>Get all incidents report</b><p>
         <p>GET - https://reportlyapi.herokuapp.com/reportly/api/v1/incidents
         <p>
     </li>
     <li>
+        <p><b>Get an incident report by id</b><p>
         <p>GET - https://reportlyapi.herokuapp.com/reportly/api/v1/incident/1
         <p>
     </li>
     <li>
+        <p><b>Create an incident report</b><p>
         <p>POST - https://reportlyapi.herokuapp.com/reportly/api/v1/incident
         </p>
         <p> 
