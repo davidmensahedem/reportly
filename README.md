@@ -56,6 +56,8 @@
     <li>
         <p>GET - https://reportlyapi.herokuapp.com/reportly/api/v1/incidents
         <p>
+    </li>
+    <li>
         <p>GET - https://reportlyapi.herokuapp.com/reportly/api/v1/incident/1
         <p>
     </li>
