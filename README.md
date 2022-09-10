@@ -51,17 +51,30 @@
 
 ## Routes
 <code>
-    GET     https://reportlyapi.herokuapp.com/reportly/api/v1/incidents
-    GET     https://reportlyapi.herokuapp.com/reportly/api/v1/incident/1
 
-    POST     https://reportlyapi.herokuapp.com/reportly/api/v1/incident
+   <ul>
+    <li>
+        <p>GET - https://reportlyapi.herokuapp.com/reportly/api/v1/incidents
+        <p>
+        <p>GET - https://reportlyapi.herokuapp.com/reportly/api/v1/incident/1
+        <p>
+    </li>
+    <li>
+        <p>POST - https://reportlyapi.herokuapp.com/reportly/api/v1/incident
+        </p>
+        <p> 
+           body     
+           {
+            "incident_desc":"string", 
+            "city":"string", 
+            "country":"string"
+            }
+        </p>    
+    </li>
 
-    -body
-    {
-        "incident_desc":"string", 
-        "city":"string", 
-        "country":"string"
-    }
+
+   </ul>
+
 </code>
 
 ## Response
