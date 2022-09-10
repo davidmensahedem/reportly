@@ -10,7 +10,8 @@ try {
         database: process.env.PGDATABASE,
         password: process.env.PGPASSWORD,
         port: process.env.PGPORT,
-        ssl: { rejectUnauthorized: false }
+
+        ssl: { rejectUnauthorized: false }  // not needed when developing locally so remove it
 
     });
 
