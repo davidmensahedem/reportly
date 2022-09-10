@@ -51,10 +51,10 @@
 
 ## Routes
 <code>
-    GET     /incidents
-    GET     /incident/1
+    GET     https://reportlyapi.herokuapp.com/reportly/api/v1/incidents
+    GET     https://reportlyapi.herokuapp.com/reportly/api/v1/incident/1
 
-    POST     /incident
+    POST     https://reportlyapi.herokuapp.com/reportly/api/v1/incident
 
     -body
     {
@@ -67,7 +67,7 @@
 ## Response
 
 <code>
-    -GET     /incidents
+    -GET     https://reportlyapi.herokuapp.com/reportly/api/v1/incidents
 
     [{
           success: true,
@@ -90,7 +90,7 @@
     }]
 
 
-    -GET     /incident/1
+    -GET     https://reportlyapi.herokuapp.com/reportly/api/v1/incident/1
 
     {
         "success": true,
@@ -111,7 +111,7 @@
     }
 
 
-    -POST      /incident
+    -POST      https://reportlyapi.herokuapp.com/reportly/api/v1/incident
 
 
         [{
